@@ -1,0 +1,28 @@
+.card {
+  width: 430px;
+  background: #c5a491;
+  text-align: center;
+  padding: 2.5rem 2rem;
+  border-radius: 5px;
+  
+  p {
+    color: #5f4435;
+  }
+  h2{
+    color: #453227;
+
+  }
+  .icon {
+    width: 4rem;
+    height: 4rem;
+    margin: 0 auto;
+    border-radius: 50%;
+    background-color: #eaded7;
+    img {
+      color: #453227;
+      width: 2rem;
+      margin: 0 auto;
+      margin-top: 1rem;
+    }
+  }
+}
