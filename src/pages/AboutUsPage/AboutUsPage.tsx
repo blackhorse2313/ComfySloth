@@ -1,11 +1,11 @@
 import './AboutUsPage.scss'
-
+import picture from '../../assets/images/hero-bcg.a876f19f6786a3aca992.jpeg'
 
 export const AboutUsPage = () =>{
   return(
     <section className="our-story container"> 
               
-                <img src="./assets/img/hero-bcg.a876f19f6786a3aca992.jpeg" alt=""/>
+                <img src={picture} alt=""/>
 
                 <article>
                     <div className="title">
