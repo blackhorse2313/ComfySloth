@@ -1,0 +1,37 @@
+.customFurniture {
+  background: #eaded7;
+  padding: 70px 0px 20px;
+
+  .section-content {
+    margin: 0px 200px;
+
+    h3 {
+      color: #453227;
+      line-height: 1.25;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      h3 {
+        font-size: 2rem;
+        margin-top: 16px;
+        @media screen and (max-width: 800px) {
+          font-size: 1.5rem;
+        }
+      }
+      p {
+        color: #795744;
+        margin-top: 16px;
+        line-height: 2;
+      }
+    }
+
+    .cards {
+      margin-top: 4rem;
+      display: flex;
+      gap: 2.5rem;
+    }
+  }
+}
+
+
