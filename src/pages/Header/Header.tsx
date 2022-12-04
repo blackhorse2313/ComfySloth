@@ -3,6 +3,6 @@ import './Header.scss'
 
 export const Header = () =>{
   return(
-    <h1>headerslmmm</h1>
+    <h1>hello</h1>
   )
 }
