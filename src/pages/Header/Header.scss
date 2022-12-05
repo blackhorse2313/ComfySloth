@@ -21,6 +21,10 @@
             list-style: none;
             color: grey;
             font-size: 18px;
+            cursor: pointer;
+            &:hover{
+                color: rgb(189, 139, 2) ;
+            }
         }
     }
     .cart-login {
@@ -33,6 +37,10 @@
             font-size: 25px;
             li {
                 padding: 0 20px;
+                cursor: pointer;
+                &:hover{
+                    color: rgb(189, 139, 2) ;
+                }
             }
         }
     }

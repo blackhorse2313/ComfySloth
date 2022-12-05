@@ -18,8 +18,8 @@ export const Header = () => {
             <li>Products</li></ul></div>
             <div className="cart-login">
           <ul>
-            <li>Cart <FontAwesomeIcon icon={faCartShopping} /> </li>
-            <li>Login <FontAwesomeIcon icon={faUserPlus} /></li>
+            <li>Cart<FontAwesomeIcon icon={faCartShopping} /> </li>
+            <li>Login<FontAwesomeIcon icon={faUserPlus} /></li>
           </ul>
         </div>
         </div>
