@@ -1,5 +1,39 @@
-
-
-*{
+.nav-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px 100px;
+    align-items: center;
+    flex-wrap: wrap;
+    .logo {
+        width: 20%;
+        img {
+            width: 170px;
+        }
+    }
+    .menu {
+        width: 40%;
+        ul {
+            display: flex;
+            justify-content: space-evenly;
+        }
+        li {
+            list-style: none;
+            color: grey;
+            font-size: 18px;
+        }
+    }
+    .cart-login {
+        width: 20%;
+        ul {
+            display: flex;
+            list-style: none;
+            justify-content: center;
+            color: rgb(34, 34, 34);
+            font-size: 25px;
+            li {
+                padding: 0 20px;
+            }
+        }
+    }
 }
-
