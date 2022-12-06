@@ -1,0 +1,21 @@
+.line {
+  background-color: rgb(234, 222, 215);
+  min-height: 20vh;
+  text-align: start;
+  padding: 20px 70px;
+
+  h1 {
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+
+    a {
+      color: #795744;
+      padding: 0.5rem;
+      transition: all 0.3s linear;
+      text-decoration: none;
+      &:hover {
+        color: #453227;
+      }
+    }
+  }
+}
