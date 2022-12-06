@@ -1,0 +1,29 @@
+.InputAddOn {
+  display: flex;
+  max-width: 500px;
+
+  .input {
+    font-size: 1rem;
+    flex: 1;
+    padding: 0.5rem 1rem;
+    border: 2px solid;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    border-right: none;
+    color: black;
+  }
+
+  .button {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border: 2px solid;
+    background-color: #ab7a5f;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+}
+.text-danger {
+  color: red;
+  font-size: 1rem;
+  text-align: start;
+}
