@@ -8,12 +8,12 @@ import { ProductsPage } from './pages/ProductsPage/ProductsPage';
 import { CartPage } from './pages/CartPage/CartPage';
 import { LoginPage } from './pages/LoginPage/LoginPage';
 import { Footer } from './pages/Footer/Footer';
-//import { Header } from './pages/Header/Header';
+import { Header } from './pages/Header/Header';
 
 function App() {
   return (
     <div className="App">
-    {/* <Header /> */}
+    <Header />
     <main> 
       <Routes>
         <Route path="/" element={<HomePage />} />
