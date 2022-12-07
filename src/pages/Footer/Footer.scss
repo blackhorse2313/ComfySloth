@@ -1,5 +1,7 @@
+@import '../../variables';
+
 .footer-info {
-  background-color: #222;
+  background-color: $dark-background;
   align-items: center;
   height: 5rem;
   @media screen and (max-width: 776px) {
@@ -15,12 +17,12 @@
     h4 {
       text-align: center;
       font-weight: 400;
-      color: white;
+      color: $color-primary-light;
       margin-bottom: 0px;
       margin-top: 0px;
     }
     .brown {
-      color: #ab7a5f;
+      color: $secondary;
       margin-right: 6px;
     }
   }
