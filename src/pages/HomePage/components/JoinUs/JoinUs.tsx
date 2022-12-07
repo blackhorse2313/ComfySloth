@@ -1,5 +1,5 @@
 import './JoinUs.scss';
-import { Subscribe } from './components/Subscribe/Subscribe';
+import { Subscribe } from './Subscribe/Subscribe';
 
 export const JoinUs = () => {
   return (

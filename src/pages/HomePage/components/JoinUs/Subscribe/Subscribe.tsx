@@ -17,8 +17,8 @@ export const Subscribe = () => {
     }
   };
   return (
-    <div className="inputAdd">
-      <div className="InputAddOn">
+    <div className="input-add">
+      <div className="input-add-on">
         <input type={email} className="input" placeholder="Enter Email" onChange={checkEmail} />
 
         <button className="button">Subscribe</button>
