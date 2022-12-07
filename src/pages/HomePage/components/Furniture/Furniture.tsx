@@ -3,7 +3,7 @@ import { FurnitureItem } from './FurnitureItem';
 import compas from './svgviewer-output.svg';
 export const Furniture = () => {
   return (
-    <section className="customFurniture">
+    <section className="custom-furniture">
       <div className="section-content">
         <div className="header">
           <h3>

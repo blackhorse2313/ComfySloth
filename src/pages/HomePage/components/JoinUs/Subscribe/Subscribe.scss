@@ -1,4 +1,6 @@
-.InputAddOn {
+@import '../../../../../variables';
+
+.input-add-on {
   display: flex;
   max-width: 500px;
 
@@ -10,20 +12,20 @@
     border-bottom-left-radius: 5px;
     border-top-left-radius: 5px;
     border-right: none;
-    color: black;
+    color: $font-color;
   }
 
   .button {
     font-size: 1rem;
     padding: 0.5rem 1rem;
     border: 2px solid;
-    background-color: #ab7a5f;
+    background-color: $secondary;
     border-bottom-right-radius: 5px;
     border-top-right-radius: 5px;
   }
 }
 .text-danger {
-  color: red;
+  color: $alert-color;
   font-size: 1rem;
   text-align: start;
 }
