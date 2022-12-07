@@ -15,7 +15,15 @@ export const BreadCrumbs = (props: IBreadCrumbsProps) => {
     <section>
       <div className="line">
         <h1>
-          {urls.map((item) => (item.href ? <a href={item.href}>{item.name}</a> : <span>{item.name}</span>))}
+          {urls.map((item, index) =>
+            item.href ? (
+              <a href={item.href} key={index}>
+                {item.name}
+              </a>
+            ) : (
+              <span key={index}>{item.name}</span>
+            ),
+          )}
         </h1>
       </div>
     </section>
