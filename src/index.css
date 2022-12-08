@@ -45,12 +45,12 @@ code {
 
 @media screen and (min-width: 800px){
   h2 {
-      font-size: 2.5rem !important;
+      font-size: 2.5rem;
   }
 }
 
 @media screen and (min-width: 800px){
   h3 {
-      font-size: 2rem !important;
+      font-size: 2rem ;
   }
 }
