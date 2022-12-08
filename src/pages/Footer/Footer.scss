@@ -1,0 +1,29 @@
+@import '../../variables';
+
+.footer-info {
+  background-color: $dark-background;
+  align-items: center;
+  height: 5rem;
+  @media screen and (max-width: 776px) {
+  }
+  .text {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    @media screen and (max-width: 776px) {
+      display: block;
+    }
+
+    h4 {
+      text-align: center;
+      font-weight: 400;
+      color: $color-primary-light;
+      margin-bottom: 0px;
+      margin-top: 0px;
+    }
+    .brown {
+      color: $secondary;
+      margin-right: 6px;
+    }
+  }
+}
