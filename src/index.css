@@ -17,6 +17,18 @@ code {
 }
 
 
-.container{
+/* .container{
   margin: 0px 193px;
+} */
+
+@media screen and (min-width:992px){
+  .container{
+      width: 95vw;
+  }
+}   
+
+.container{
+  width: 78vw;
+  max-width: 1170px;
+  margin: 0 auto;
 }
