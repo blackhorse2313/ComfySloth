@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import { HomePage } from './pages/HomePage/HomePage';
-//import { AboutUsPage } from './pages/AboutUsPage/AboutUsPage';
+import { AboutUsPage } from './pages/AboutUsPage/AboutUsPage';
 import { ProductsPage } from './pages/ProductsPage/ProductsPage';
 import { CartPage } from './pages/CartPage/CartPage';
 import { LoginPage } from './pages/LoginPage/LoginPage';
@@ -17,7 +17,7 @@ function App() {
     <main> 
       <Routes>
         <Route path="/" element={<HomePage />} />
-        {/* <Route path="/about" element={<AboutUsPage />} /> */}
+        <Route path="/about" element={<AboutUsPage />} />
         <Route path="/products" element={<ProductsPage />} />
         <Route path="/cart" element={<CartPage />} />
         <Route path="/login" element={<LoginPage />} />
