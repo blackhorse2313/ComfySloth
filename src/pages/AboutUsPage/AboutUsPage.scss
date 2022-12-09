@@ -1,0 +1,72 @@
+@import '../../variables';
+
+.line{
+    background-color: $color-light-brown;
+    min-height: 20vh;
+    display: flex;
+    align-items: center;
+    
+    h3{
+        font-size: 1.5rem;
+        color: $secondaryDark;
+        letter-spacing: 0.1rem;
+        margin-left: 0% !important;
+        
+        a{
+            
+            color: $color-primary;
+            padding: 0.5rem;
+            transition: all 0.3s linear;
+            text-decoration: none;
+            &:hover{
+            color: $secondaryDark;
+            
+            }
+        }
+    }
+}
+
+
+
+.our-story{
+    padding: 5rem 0;
+    
+    display: grid;
+  gap: 4rem;
+  img {
+    width: 100%;
+    display: block;
+    border-radius: 0.25rem;
+    height: 500px;
+    object-fit: cover;
+  }
+  p {
+    line-height: 2;
+    max-width: 45em;
+    margin: 0 auto;
+    margin-top: 2rem;
+    color: $accent-color;
+  }
+  .title {
+    text-align: left;
+  }
+
+  h2{
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+    margin-bottom: 0.75rem;
+    color: $font-color;
+  }
+  .underline {
+    margin-left: 0;
+    height: 0.25rem;
+    width: 6rem;
+    margin-right: auto;
+    background-color: $secondary;
+  }
+  @media (min-width: 992px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+
