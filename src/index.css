@@ -218,7 +218,7 @@ code {
 
 @media only screen and (max-width:768px) {
   .container {
-      width: 100%;
+      width: 95%;
   }
   .col-sm-1 {
       width: calc(100% - (11/12 * 100%));
@@ -260,7 +260,7 @@ code {
 
 @media only screen and (max-width:576px) {
   .container {
-      width: 100%;
+      width: 95%;
   }
   .col-xs-1 {
       width: calc(100% - (11/12 * 100%));

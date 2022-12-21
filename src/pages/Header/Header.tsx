@@ -2,6 +2,8 @@ import './Header.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping, faUserPlus } from '@fortawesome/free-solid-svg-icons';
 import logo from '../../assets/images/logo.svg';
+import { Link } from 'react-router-dom';
+
 
 export const Header = () => {
   return (
@@ -25,8 +27,10 @@ export const Header = () => {
                 <FontAwesomeIcon icon={faCartShopping} />{' '}
               </li>
               <li>
+                <Link to="/login">
                 Login
                 <FontAwesomeIcon icon={faUserPlus} />
+                </Link>
               </li>
             </ul>
           </div>

@@ -1,5 +1,5 @@
 @import "../../variables";
-#login {
+#register {
     padding: 60px 0;
     p {
         position: relative;
@@ -67,43 +67,36 @@
                 border: 1px solid $secondaryDark;
                 border-radius: 20px;
             }
-            .forPassword {
-                position: relative;
-                display: block;
-                i {
-                    position: absolute;
-                    right: 13%;
-                    z-index: 1;
-                    top: 8px;
-                    cursor: pointer;
-                    font-size: 20px;
-                    color: $secondaryDark;
-                }
-            }
         }
         a {
             color: $secondary;
             text-decoration: none;
             padding: 0 10px;
         }
-        .forgetpasword,
-        .account {
-            padding: 10px 0;
+        .forPassword {
+            position: relative;
+            display: block;
+            i {
+                position: absolute;
+                right: 13%;
+                z-index: 1;
+                top: 8px;
+                cursor: pointer;
+                font-size: 20px;
+                color: $secondaryDark;
+            }
         }
     }
     .right {
         width: 100%;
-        height: 100%;
         img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+            max-width: 100%;
         }
     }
 }
 
 @media only screen and (max-width: 768px) {
-    #login {
+    #register {
         backdrop-filter: blur(5px);
         background-image: linear-gradient(#fdfdfd, #00000036),
             url(../../assets/images/hero-bcg.a876f19f6786a3aca992.jpeg);

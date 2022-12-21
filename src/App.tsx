@@ -7,6 +7,7 @@ import { AboutUsPage } from './pages/AboutUsPage/AboutUsPage';
 import { ProductsPage } from './pages/ProductsPage/ProductsPage';
 import { CartPage } from './pages/CartPage/CartPage';
 import { LoginPage } from './pages/LoginPage/LoginPage';
+import { RegisterPage } from './pages/RegisterPage/RegisterPage';
 import { Footer } from './pages/Footer/Footer';
 import { Header } from './pages/Header/Header';
 
@@ -21,6 +22,7 @@ function App() {
         <Route path="/products" element={<ProductsPage />} />
         <Route path="/cart" element={<CartPage />} />
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/register" element={<RegisterPage />} />
       </Routes>
     </main>
     <Footer />
