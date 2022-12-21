@@ -13,18 +13,18 @@ import { Header } from './pages/Header/Header';
 function App() {
   return (
     <div className="App">
-    <Header />
-    <main> 
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        {/* <Route path="/about" element={<AboutUsPage />} /> */}
-        <Route path="/products" element={<ProductsPage />} />
-        <Route path="/cart" element={<CartPage />} />
-        <Route path="/login" element={<LoginPage />} />
-      </Routes>
-    </main>
-    <Footer />
-  </div>
+      <Header />
+      <main>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          {/* <Route path="/about" element={<AboutUsPage />} /> */}
+          <Route path="/products" element={<ProductsPage />} />
+          <Route path="/cart" element={<CartPage />} />
+          <Route path="/login" element={<LoginPage />} />
+        </Routes>
+      </main>
+      <Footer />
+    </div>
   );
 }
 
