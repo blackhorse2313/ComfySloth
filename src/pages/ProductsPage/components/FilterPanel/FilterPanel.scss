@@ -1,32 +1,69 @@
 @import '../../../../variables';
-
-.search-input {
-  padding: 0.5rem;
-  background: $light-background;
-  border: 2px solid $dark-background;
-  border-radius: 5px;
-  border-color: transparent;
-  letter-spacing: 0.2em;
-}
-.category {
-  letter-spacing: 0.1em;
-
+.filter-panel {
+  @media screen and (min-width: 768px) {
+    position: sticky;
+    top: 1rem;
+  }
   h5 {
     font-size: 1rem;
     color: $font-color;
-    margin-bottom: 0px;
+    margin-bottom: 15px;
+    letter-spacing: 0.1em;
   }
-  ul {
-    text-decoration: none;
-    padding-left: 0px;
-    li {
-      list-style: none;
-      cursor: pointer;
-      margin: 0.25em 0px;
-      padding: 0.25rem 0px;
-      font-size: 0.9rem;
-      font-weight: 500;
-      color: $accent-color;
+
+  .form-control {
+    margin-bottom: 1.25rem;
+  }
+  .search-input {
+    padding: 0.5rem;
+    background: $light-background;
+    border: 2px solid $dark-background;
+    border-radius: 5px;
+    border-color: transparent;
+    letter-spacing: 0.1em;
+  }
+  .category {
+    letter-spacing: 0.1em;
+
+    ul {
+      text-decoration: none;
+      padding-left: 0px;
+      li {
+        list-style: none;
+        cursor: pointer;
+        margin: 0.25em 0px;
+        padding: 0.25rem 0px;
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: $accent-color;
+      }
     }
+  }
+  .dropdown {
+    width: 6rem;
+    height: 2rem;
+    padding: 0px;
+    margin-bottom: 60px;
+  }
+  .check-box {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    -webkit-box-align: center;
+    align-items: center;
+    text-transform: capitalize;
+    /* column-gap: 0.5rem; */
+    font-size: 1rem;
+    color: $font-color;
+    font-weight: 450;
+    line-height: 1.5;
+  }
+
+  .clear-btn {
+    background: $alert-color;
+    color: $color-primary-light;
+    padding: 0.4rem 0.7rem;
+    border-radius: 4px;
+    letter-spacing: 0.1em;
+    border: none;
   }
 }
