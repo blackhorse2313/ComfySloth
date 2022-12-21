@@ -1,30 +1,39 @@
 import './Dropdown.scss';
-import Select from 'react-select';
-interface IItem {
-  id: number;
-  name: string;
-}
+import React, { useEffect, useState } from 'react';
+import Select, { ActionMeta, StylesConfig } from 'react-select';
 
 interface IDropdownProps {
-  title: string;
-  items: IItem[];
-  selectedValue: IItem;
+  onChange(value: string | undefined): void;
+  label?: string;
+  options: ISelectItem[];
 }
+
+interface ISelectItem {
+  value: string;
+  label: string;
+}
+
 export const Dropdown = (props: IDropdownProps) => {
-  const { title, items, selectedValue } = props;
-  const options = [
-    { id: 1, name: 'Chocolate' },
-    { id: 2, name: 'Strawberry' },
-    { id: 3, name: 'Vanilla' },
-  ];
+  const { options, label } = props;
+  const [selectedOption, setSelectedOption] = useState<ISelectItem | null>();
+
+  useEffect(() => {
+    if (selectedOption?.value) props.onChange(selectedOption?.value);
+  }, [selectedOption]);
+
   return (
-    <Select
-      id="currencyFrom"
-      isMulti={false}
-      value={selectedValue}
-      onChange={() => {}}
-      options={options}
-      isSearchable={false}
-    />
+    <div className="custom-select">
+      {label && <label>{label}</label>}
+      <Select
+        isMulti={false}
+        classNamePrefix="custom-select"
+        defaultValue={selectedOption}
+        onChange={setSelectedOption}
+        options={options}
+        classNames={{
+          option: (state) => (state.isFocused ? 'item-focused' : state.isSelected ? 'item-selected' : ''),
+        }}
+      />
+    </div>
   );
 };
