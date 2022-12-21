@@ -1,0 +1,24 @@
+@import '../../variables';
+
+.custom-select {
+font-size: 0.8rem;
+padding: 0px;
+margin: 0px;
+display: flex;
+justify-content:space-around;
+border-color: transparent;
+label{
+ 
+  text-align: center;
+  font-size: 1rem;
+  margin: auto 0;
+  margin-right: 20px;
+}
+  .item-selected {
+    background-color: $accent-color;
+  }
+  .item-focused {
+    background-color: rgba(0, 0, 0, 0.28);
+    
+  }
+}
