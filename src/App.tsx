@@ -7,6 +7,7 @@ import { HomePage } from './pages/HomePage/HomePage';
 import { LoginPage } from './pages/LoginPage/LoginPage';
 import { ProductDetail } from './pages/ProductDetail/ProductDetail';
 import { ProductsPage } from './pages/ProductsPage/ProductsPage';
+import { RegisterPage } from './pages/RegisterPage/RegisterPage';
 import { Route, Routes } from 'react-router-dom';
 import React from 'react';
 
@@ -22,6 +23,7 @@ function App() {
           <Route path="/productdetail" element={<ProductDetail />} />
           <Route path="/cart" element={<CartPage />} />
           <Route path="/login" element={<LoginPage />} />
+          <Route path="/register" element={<RegisterPage />} />
         </Routes>
       </main>
       <Footer />
