@@ -1,28 +1,33 @@
+@import '../../../../variables';
+
 .card {
   width: 430px;
-  background: #c5a491;
+  
+  background: $secondaryLight;
   text-align: center;
   padding: 2.5rem 2rem;
   border-radius: 5px;
   @media screen and (max-width: 1250px) {
-   width: 100%;
-   margin-bottom: 20px;
+    width: 100%;
+    margin-bottom: 20px;
   }
   p {
-    color: #5f4435;
+    color: $color-primary;
+    font-size: 1.1rem;
   }
-  h2{
-    color: #453227;
-
+  h3 {
+    color: $secondaryDark;
+    font-size: 1.5rem;
+    margin: 10px 0px;
   }
   .icon {
     width: 4rem;
     height: 4rem;
     margin: 0 auto;
     border-radius: 50%;
-    background-color: #eaded7;
+    background-color: $color-background-highlight;
     img {
-      color: #453227;
+      color: $secondaryDark;
       width: 2rem;
       margin: 0 auto;
       margin-top: 1rem;

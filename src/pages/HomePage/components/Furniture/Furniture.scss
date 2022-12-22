@@ -19,13 +19,15 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       text-align: start;
-
+      padding-top: 20px;
       @media screen and (max-width: 993px) {
         display: block;
       }
+
       h3 {
         font-size: 2rem;
         margin-top: 1rem;
+        letter-spacing: 0.1rem;
         @media screen and (max-width: 800px) {
           font-size: 1.5rem;
         }
@@ -35,6 +37,7 @@
         margin-top: 1rem;
         line-height: 2;
         text-align: start;
+        font-size: 1.1rem;
       }
     }
 

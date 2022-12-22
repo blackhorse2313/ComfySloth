@@ -13,7 +13,7 @@ export const FurnitureItem = (props: IFurnitureItemProps) => {
       <div className="icon">
         <img src={icon} alt="" />
       </div>
-      <h2>{title}</h2>
+      <h3>{title}</h3>
       <p>{text}</p>
     </div>
   );
