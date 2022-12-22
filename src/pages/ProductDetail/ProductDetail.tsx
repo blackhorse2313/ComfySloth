@@ -72,8 +72,8 @@ export const ProductDetail = () => {
             <img src={product?.imageUrl ?? ''} alt="" className="main-img" />
 
             <div className="gallery">
-              <img src={image} alt="" />
-              <img src={image} alt="" />
+              <img src={product?.imageUrl ?? ''} alt="" />
+              <img src={product?.imageUrl ?? ''} alt="" />
               <img src={image} alt="" />
               <img src={image} alt="" />
               <img src={image} alt="" />
