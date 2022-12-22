@@ -8,10 +8,27 @@ import { LoginPage } from './pages/LoginPage/LoginPage';
 import { ProductDetail } from './pages/ProductDetail/ProductDetail';
 import { ProductsPage } from './pages/ProductsPage/ProductsPage';
 import { RegisterPage } from './pages/RegisterPage/RegisterPage';
-import { Route, Routes } from 'react-router-dom';
-import React from 'react';
+import { Route, Routes, useNavigate } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { baseUrl } from './constant';
+import { logIn } from './store/currentUser.slice';
+import { getValueFromLocalStorage } from './services/localStorage.service';
 
 function App() {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  useEffect(() => {
+    const authToken = getValueFromLocalStorage('authToken');
+    if (authToken) {
+      fetch(`${baseUrl}/users/current`)
+        .then((response) => response.json())
+        .then((data) => dispatch(logIn({ user: data })));
+    } else {
+      navigate('/login');
+    }
+  }, []);
+
   return (
     <div className="App">
       <Header />
