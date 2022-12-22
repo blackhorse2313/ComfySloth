@@ -1,6 +1,6 @@
 import './Slider.scss';
-import picture1 from '../../../../assets/images/hero-bcg.a876f19f6786a3aca992.jpeg'
-import picture2 from '../../../../assets/images/slider2.jpeg'
+import picture1 from '../../../../assets/images/hero-bcg.a876f19f6786a3aca992.jpeg';
+import picture2 from '../../../../assets/images/slider2.jpeg';
 
 
 export const Slider = () => {
