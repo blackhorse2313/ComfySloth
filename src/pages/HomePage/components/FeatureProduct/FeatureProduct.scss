@@ -1,0 +1,109 @@
+@import '../../../../variables';
+
+body{
+    color: $font-color;
+}
+.FeatureProduct{
+    background-color: $light-background;
+    padding: 5rem 0;
+    .title{
+        text-align: center;
+
+        h2{
+            margin-bottom: 0.75rem;
+    text-transform: capitalize;
+    letter-spacing: 0.1rem;
+        }
+
+        .underline{
+            height: 0.25rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 6rem;
+    background: $secondary;
+        }
+    }
+
+    .featured{
+        margin: 4rem auto;
+        
+    }
+    .hover{
+        
+        position: relative;
+        background: #222;
+        border-radius: 0.25rem;
+
+        img{
+            height: 225px;
+            width: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: 0.25rem;
+    transition: all 0.3s linear;
+        }
+
+        .link{
+            position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: $secondary;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    transition: all 0.3s linear;
+    opacity: 0;
+    cursor: pointer;
+
+    svg{
+        font-size: 1.25rem;
+    color: white;
+    }
+        }
+    }
+
+    .footer{
+        margin-top: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h5{
+            margin-bottom: 0px;
+            font-weight: 400;
+            line-height: 1.25;
+            text-transform: capitalize;
+            letter-spacing: 0.1rem;
+        }
+
+        p{
+            color: $secondary;
+            letter-spacing: 0.1rem;
+            margin-bottom: 0px;
+            font-weight: 400;
+        }
+    }
+
+    .btn{
+        display: block;
+        width: 148px;
+        margin: 0px auto;
+        text-align: center;
+        border-color: transparent;border-radius: 0.25rem;
+        box-shadow: 0 1px 3px rgb(0 0 0 / 20%);
+        background-color: $secondary;
+        color: $color-background-highlight;
+        cursor: pointer;
+        font-size: .875rem;
+        font-weight: 400;
+        letter-spacing: 0.1rem;
+        padding: 0.375rem 0.75rem;
+    text-transform: uppercase;
+    transition: all 0.3s linear;
+    text-decoration: none;
+    }
+}
