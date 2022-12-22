@@ -4,6 +4,7 @@ import { BreadCrumbs } from '../../components/Breadcrumbs/Breadcrumbs';
 import { Dropdown } from '../../components/Dropdown/Dropdown';
 import { FilterPanel } from './components/FilterPanel/FilterPanel';
 import { ListView } from './components/Products/ListView/ListView';
+import { GridView } from './components/Products/GridView/GridView';
 import { RootState } from '../../store/store';
 import { sortProducts } from './ProductPageSlice';
 import { useDispatch, useSelector } from 'react-redux';
@@ -97,7 +98,7 @@ export const ProductsPage = () => {
                   <Dropdown options={items} label={'Sort By'} onChange={onChangeDrop} />
                 </form>
               </div>
-              <div className="list-view">{gridState ? <></> : <ListView />}</div>
+              <div className="list-view">{gridState ? <GridView /> : <ListView />}</div>
             </section>
           </div>
         </div>
