@@ -1,5 +1,6 @@
 import './CartPage.scss';
 
+
 export const CartPage = () => {
   return (
     <section className="container cart">
@@ -108,3 +109,4 @@ export const CartPage = () => {
     </section>
   );
 };
+

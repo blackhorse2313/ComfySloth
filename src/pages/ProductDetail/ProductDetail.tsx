@@ -11,6 +11,21 @@ import { ProductResponse } from '../../models/ProductResponse';
 export const ProductDetail = () => {
   const [count, setCount] = useState(0);
 
+
+  
+  const urlParams = useParams<{ productId: string }>();
+  const productId = urlParams.productId;
+  const [product, setProduct] = useState<ProductResponse | null>(null);
+
+  console.log(product);
+
+  useEffect(() => {
+    fetch(`${baseUrl}/products/${productId}`)
+      .then((response) => response.json())
+      .then((data) => setProduct(data));
+  }, [productId]);
+
+
   function increment() {
     //setCount(prevCount => prevCount+=1);
     setCount(function (prevCount) {
@@ -38,21 +53,10 @@ export const ProductDetail = () => {
     },
     {
       href: '',
-      name: ``,
+      name: `${product?.name ?? ''}`,
     },
   ];
 
-  const urlParams = useParams<{ productId: string }>();
-  const productId = urlParams.productId;
-  const [product, setProduct] = useState<ProductResponse | null>(null);
-
-  console.log(product);
-
-  useEffect(() => {
-    fetch(`${baseUrl}/products/${productId}`)
-      .then((response) => response.json())
-      .then((data) => setProduct(data));
-  }, [productId]);
 
   return (
     <>

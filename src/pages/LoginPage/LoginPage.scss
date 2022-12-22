@@ -70,11 +70,11 @@
             .forPassword {
                 position: relative;
                 display: block;
-                i {
+                .icon {
                     position: absolute;
                     right: 13%;
                     z-index: 1;
-                    top: 8px;
+                    top: 5px;
                     cursor: pointer;
                     font-size: 20px;
                     color: $secondaryDark;
@@ -128,7 +128,7 @@
                     width: 100%;
                 }
                 .forPassword {
-                    i {
+                    .icon {
                         right: 15px;
                     }
                 }
