@@ -1,10 +1,10 @@
-import './NawBar.scss';
+import './NavBar.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping, faUserPlus } from '@fortawesome/free-solid-svg-icons';
 import logo from '../../assets/images/logo.svg';
 import { Link } from 'react-router-dom';
 
-export const NawBar = () => {
+export const NavBar = () => {
   return (
     <section id="header">
       <nav className="row">

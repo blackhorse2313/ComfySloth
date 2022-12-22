@@ -2,7 +2,7 @@ import './App.css';
 import { AboutUsPage } from './pages/AboutUsPage/AboutUsPage';
 import { CartPage } from './pages/CartPage/CartPage';
 import { Footer } from './pages/Footer/Footer';
-import { NawBar } from './pages/NawBar/NawBar';
+import { NavBar } from './pages/NavBar/NavBar';
 import { HomePage } from './pages/HomePage/HomePage';
 import { LoginPage } from './pages/LoginPage/LoginPage';
 import { ProductDetail } from './pages/ProductDetail/ProductDetail';
@@ -31,7 +31,7 @@ function App() {
 
   return (
     <div className="App">
-      <NawBar />
+      <NavBar />
       <main>
         <Routes>
           <Route path="/" element={<HomePage />} />
