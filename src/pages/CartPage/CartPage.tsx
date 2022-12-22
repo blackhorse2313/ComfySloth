@@ -1,7 +1,11 @@
+import { Link } from 'react-router-dom';
+import { MainContext, useContext } from '../../store/contex';
 import './CartPage.scss';
 
 
 export const CartPage = () => {
+  const {basket , setBasket}=  useContext(MainContext);
+  const sum = basket.reduce((acc, object) => acc + object.price, 0);
   return (
     <section className="container cart">
       <div className="head">
@@ -9,61 +13,29 @@ export const CartPage = () => {
           <h5>Item</h5>
           <h5>Price</h5>
           <h5>Quantity</h5>
-          <h5>Subtotal</h5>
           <span></span>
         </div>
         <hr />
       </div>
-
-      <div className="product">
+      {basket.map(item=>
+        <div key={item.id} className="product">
         <div className="title">
           <img
-            src="https://v5.airtableusercontent.com/v1/13/13/1671710400000/cBADR3Ykxoxl0MkXX9kQPQ/bJszrcHzCdSytgEFhJtanrKnPaDEew9L11QHw58ggJfBzzCbeIYljmDX3fYaey80HY80yiZ3DzOyZ12oCgq55mTas8tv_kdRegN9uvyMGVGn90rXjfbfef-2V3uzZ5p8/A8ZFbRYnMhjnWkcww_lRxdja-IXBQFG1S0aU-cEg39M"
+            src={item.imgUrl}
             alt="modern poster"
           />
 
           <div>
-            <h5 className="name">Modern Poster</h5>
+            <h5 className="name">{item.name}</h5>
           </div>
         </div>
 
-        <h5 className="price">$30.99 </h5>
+        <h5 className="price">{item.price}</h5>
 
-        <div className="amount-btns">
-          <button type="button" className="amount-btn">
-            <svg
-              stroke="currentColor"
-              fill="currentColor"
-              stroke-width="0"
-              viewBox="0 0 448 512"
-              height="1em"
-              width="1em"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path>
-            </svg>
-          </button>
+       
+        
 
-          <h2 className="amount">1</h2>
-
-          <button type="button" className="amount-btn">
-            <svg
-              stroke="currentColor"
-              fill="currentColor"
-              stroke-width="0"
-              viewBox="0 0 448 512"
-              height="1em"
-              width="1em"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path>
-            </svg>
-          </button>
-        </div>
-
-        <h5 className="subtotal">$30.99</h5>
-
-        <button className="remove-btn">
+        <button className="remove-btn" onClick={()=>setBasket(basket.filter(x=>x.id !== item.id))}>
           <svg
             stroke="currentColor"
             fill="currentColor"
@@ -78,13 +50,14 @@ export const CartPage = () => {
         </button>
       </div>
 
+      )}
+    
       <hr />
 
       <div className="link-container">
-        <a className="link-btn" href="/products">
-          continue shopping
-        </a>
-        <button type="button" className="link-btn clear-btn">
+        
+        <Link className="link-btn" to={"/products"}>continue shopping</Link>
+        <button type="button" className="link-btn clear-btn" onClick={()=>setBasket([])}>
           clear shopping cart
         </button>
       </div>
@@ -92,15 +65,8 @@ export const CartPage = () => {
       <section className="ordertotal">
         <div>
           <div className="order-amount">
-            <h5>
-              Subtotal :<span>$185.94</span>
-            </h5>
-            <p>
-              Shipping fee :<span>$5.34</span>
-            </p>
-            <hr />
             <h4>
-              Order total :<span>$191.28</span>
+              Order total :<span>${sum.toFixed(2)}</span>
             </h4>
           </div>
           <button className="btn">login</button>

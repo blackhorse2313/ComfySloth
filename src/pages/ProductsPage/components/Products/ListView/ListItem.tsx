@@ -1,3 +1,5 @@
+import { useContext } from 'react';
+import { MainContext } from '../../../../../store/contex';
 import './ListItem.scss';
 
 interface IListItemProps {
@@ -10,8 +12,9 @@ interface IListItemProps {
 
 export const ListItem = (props: IListItemProps) => {
   const { id, imgUrl, name, price, desc } = props;
+  const {basket , setBasket}=  useContext(MainContext);
   return (
-    <div className="list-view">
+    <div className="list-view" onClick={()=>{setBasket([...basket,{ id, imgUrl, name, price, desc}]);}}>
       <article>
         <img src={imgUrl} alt={name} />
         <div>

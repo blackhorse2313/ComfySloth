@@ -9,15 +9,22 @@ import { ProductDetail } from './pages/ProductDetail/ProductDetail';
 import { ProductsPage } from './pages/ProductsPage/ProductsPage';
 import { RegisterPage } from './pages/RegisterPage/RegisterPage';
 import { Route, Routes, useNavigate } from 'react-router-dom';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { baseUrl } from './constant';
 import { logIn } from './store/currentUser.slice';
 import { getValueFromLocalStorage } from './services/localStorage.service';
+import { MainContext } from './store/contex';
 
 function App() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const [basket,setBasket] = useState([]);
+  
+  const data ={
+    basket,
+    setBasket
+  };
   useEffect(() => {
     const authToken = getValueFromLocalStorage('authToken');
     if (authToken) {
@@ -33,6 +40,7 @@ function App() {
     <div className="App">
       <NavBar />
       <main>
+        <MainContext.Provider value={data}>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutUsPage />} />
@@ -42,6 +50,7 @@ function App() {
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
         </Routes>
+        </MainContext.Provider>
       </main>
       <Footer />
     </div>
