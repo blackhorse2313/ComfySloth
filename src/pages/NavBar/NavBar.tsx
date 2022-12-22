@@ -26,8 +26,9 @@ export const NavBar = () => {
           <div className="cart-login">
             <ul>
               <li>
-                Cart
-                <FontAwesomeIcon icon={faCartShopping} />{' '}
+                <Link to="/cart"> Cart
+                <FontAwesomeIcon icon={faCartShopping} />{' '}</Link>
+
               </li>
               <li>
                 <Link to="/login">
